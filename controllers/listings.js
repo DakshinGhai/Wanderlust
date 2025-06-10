@@ -27,7 +27,7 @@ module.exports.showListing = async (req, res) => {
 //new create listing for geocoding
 module.exports.createListing = async (req, res, next) => {
   try {
-    const geoApiKey = "683d891911dac606823430kmuc97b03";
+    const geoApiKey = process.env.GeoApiKey;
     const locationQuery = req.body.listing.location;
 
     // Call geocoding API
