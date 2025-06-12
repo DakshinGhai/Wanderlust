@@ -11,10 +11,24 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse bg-white" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link" href="/listings">Explore</a>
       </div>
+      <div class="navbar-nav ms-auto">
+        <form class="d-flex" method="get" action="/listings/search">
+          <input
+            name="q"
+            class="search-bar form-control me-2 ps-4 pe-4"
+            type="search"
+            placeholder="Search destination"
+          />
+          <button class="btn-search" type="submit">
+            <i class="fa-solid fa-magnifying-glass me-2"></i>Search
+          </button>
+        </form>
+      </div>
+
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new">Airbnb your home</a>
         <% if(!currUser){ %>
